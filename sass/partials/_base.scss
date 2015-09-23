@@ -1,0 +1,15 @@
+// Font weights
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+// Base font
+$base-font: Roboto, sans-serif;
+$base-font-size: 14px;
+$base-font-weight: $regular;
+
+// Mono font
+$mono-font: 'Roboto Mono', monospace;
+$mono-font-size: $base-font-size;
+
+@import 'modules/all';
