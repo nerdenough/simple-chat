@@ -15,13 +15,22 @@ $(document).ready(function() {
 function sendMessage(event) {
   var input = event.data.input;
 
-  socket.emit('message', input.val());
-  input.val('');
-  input.focus();
+  if (input.val() !== '') {
+    socket.emit('message', input.val());
+    input.val('');
+    input.focus();
+  }
 
   return false;
 }
 
-function receiveMessage(message) {
+function receiveMessage(data) {
+  // In the future, the received data will be an object
+  var message = $('<div>', { class: 'message', text: data });
+  var container = $('<div>', { class: 'container' });
+
+  container.append(message);
+  $('#messages').append(container);
+
   console.log(message);
 }

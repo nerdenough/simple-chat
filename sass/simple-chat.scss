@@ -18,11 +18,28 @@ body {
   display: flex;
   width: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   @include flex-direction(column);
 
   #messages {
-    overflow-y: auto;
+    overflow-y: scroll;
     @include flex(1);
+
+    .container {
+      width: 100%;
+      text-align: left;
+      padding: 5px 10px;
+      @include box-sizing();
+
+      .message {
+        display: inline-block;
+        background: $purple;
+        color: $very-light-grey;
+        padding: 10px;
+        border-radius: 5px;
+        @include box-sizing();
+      }
+    }
   }
 
   #form {
