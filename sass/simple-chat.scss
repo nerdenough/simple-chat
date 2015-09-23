@@ -2,4 +2,51 @@
 @import 'partials/base';
 
 // Partials
-@import 'partials/reset'
+@import 'partials/buttons';
+@import 'partials/inputs';
+@import 'partials/reset';
+
+body {
+  background: $light-grey;
+  color: $very-dark-grey;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+}
+
+#simple-chat {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  @include flex-direction(column);
+
+  #messages {
+    overflow-y: auto;
+    @include flex(1);
+  }
+
+  #form {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: $very-light-grey;
+    padding: 10px;
+    @include box-shadow(0, -2px, 5px, 0, rgba(0, 0, 0, 0.15));
+    @include box-sizing();
+
+    #message {
+      background: $very-light-grey;
+      color: $very-dark-grey;
+      font-size: 16px;
+      flex-grow: 1;
+      padding-right: 10px;
+      border: none;
+      @include box-sizing();
+    }
+
+    #send {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

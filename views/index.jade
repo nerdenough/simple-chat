@@ -1,3 +1,9 @@
 extends layout
 
 block content
+  #simple-chat
+    #messages
+    form#form(action='')
+      input#message(type='text', autocomplete='off')
+      button#send.circle.material
+        i.fa.fa-arrow-right

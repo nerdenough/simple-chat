@@ -1,0 +1,15 @@
+// Buttons
+button {
+  background: $purple;
+  color: $very-light-grey;
+  outline: none;
+  border: none;
+
+  &.material {
+    @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.26));
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+}

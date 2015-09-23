@@ -10,3 +10,16 @@
   -moz-box-shadow: $xOffset $yOffset $blur $spread $color;
   box-shadow: $xOffset $yOffset $blur $spread $color;
 }
+
+@mixin flex($val) {
+  -webkit-flex: $val;
+  -moz-flex: $val;
+  -ms-flex: $val;
+  flex: $val;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  flex-direction: $direction;
+}
