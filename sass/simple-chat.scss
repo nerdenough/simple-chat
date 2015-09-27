@@ -23,6 +23,8 @@ body {
 
   #messages {
     overflow-y: scroll;
+    padding: 5px 0;
+    @include box-sizing();
     @include flex(1);
 
     .container {
